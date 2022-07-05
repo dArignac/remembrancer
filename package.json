@@ -1,0 +1,109 @@
+{
+  "name": "remembrancer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@actions/github": "^5.0.1",
+    "@google/semantic-release-replace-plugin": "^1.1.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tauri-apps/cli": "^1.0.2",
+    "@tsconfig/svelte": "^2.0.1",
+    "globby": "^13.1.1",
+    "semantic-release": "^19.0.3",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@google/semantic-release-replace-plugin",
+        {
+          "replacements": [
+            {
+              "files": [
+                "src-tauri/Cargo.toml"
+              ],
+              "from": "^version = \".*\"",
+              "to": "version = \"${nextRelease.version}\"",
+              "results": [
+                {
+                  "file": "src-tauri/Cargo.toml",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "src-tauri/tauri.conf.json"
+              ],
+              "from": "    \"version\": \".*\"",
+              "to": "    \"version\": \"${nextRelease.version}\"",
+              "results": [
+                {
+                  "file": "src-tauri/tauri.conf.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "package.json"
+              ],
+              "from": "  \"version\": \".*\",",
+              "to": "  \"version\": \"${nextRelease.version}\",",
+              "results": [
+                {
+                  "file": "package.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "src-tauri/Cargo.toml",
+            "src-tauri/tauri.conf.json",
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}
