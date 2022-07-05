@@ -46,10 +46,13 @@ async function updateRelease(token, os) {
     assets = ["src-tauri/target/release/bundle/msi/*.msi"];
   }
 
-  if (assets.length > 0) {
-    for (const asset of assets) {
-      const file = await globby([asset]);
-      // FIXME remove this
+  const debug = await globby(["src-tauri/**"]);
+  console.log("we have files:", debug);
+  console.log("search for assets:", assets);
+
+  const files = await globby(assets);
+  if (files.length > 0) {
+    for (const file of files) {
       console.log(`uploading file ${file[0]}`);
       console.log(`file name is ${path.basename(file[0])}`);
       await uploadAsset(
@@ -58,6 +61,8 @@ async function updateRelease(token, os) {
         fs.readFileSync(file[0])
       );
     }
+  } else {
+    console.log("no files for asset pattern were found. pattern: ", assets);
   }
 }
 
