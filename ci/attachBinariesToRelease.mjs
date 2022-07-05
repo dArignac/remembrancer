@@ -52,13 +52,13 @@ async function updateRelease(token, os) {
 
   const files = await globby(assets);
   if (files.length > 0) {
-    for (const file of files) {
-      console.log(`uploading file ${file[0]}`);
-      console.log(`file name is ${path.basename(file[0])}`);
+    for (const artifact of files) {
+      console.log(`uploading file ${artifact}`);
+      console.log(`file name is ${path.basename(artifact)}`);
       await uploadAsset(
         release.id,
-        path.basename(file[0]),
-        fs.readFileSync(file[0])
+        path.basename(artifact),
+        fs.readFileSync(artifact)
       );
     }
   } else {
