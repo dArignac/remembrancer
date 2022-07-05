@@ -3,7 +3,7 @@ name: Build and Upload Artifacts
 # @semantic-release/github publishes the release as final step
 on:
   release:
-    types: [released]
+    types: [published]
 
 env:
   NODE_VERSION: 16.15.0
