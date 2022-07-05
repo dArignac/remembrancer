@@ -46,15 +46,10 @@ async function updateRelease(token, os) {
     assets = ["src-tauri/target/release/bundle/msi/*.msi"];
   }
 
-  const debug = await globby(["src-tauri/**"]);
-  console.log("we have files:", debug);
-  console.log("search for assets:", assets);
-
   const files = await globby(assets);
   if (files.length > 0) {
     for (const artifact of files) {
       console.log(`uploading file ${artifact}`);
-      console.log(`file name is ${path.basename(artifact)}`);
       await uploadAsset(
         release.id,
         path.basename(artifact),
