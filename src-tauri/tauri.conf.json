@@ -12,7 +12,9 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "notification": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -60,7 +62,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 120,
+        "height": 260,
         "resizable": true,
         "title": "Remembrancer",
         "width": 400
