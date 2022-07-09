@@ -2,13 +2,15 @@
   import Countdown from "./lib/Countdown.svelte";
   import { isPermissionGranted } from "@tauri-apps/api/notification";
   import NotificationButton from "./lib/NotificationButton.svelte";
+  import Clock from "./lib/Clock.svelte";
 
   let notifPromise = isPermissionGranted();
 </script>
 
 <main>
   <h1>Remembrancer</h1>
-  <Countdown />
+  <Clock />
+  <!-- <Countdown /> -->
   <hr />
   Notification Permissions:
   {#await notifPromise}

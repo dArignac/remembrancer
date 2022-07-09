@@ -33,6 +33,6 @@
 
 <style>
   div {
-    font-size: 2em;
+    font-size: 1em;
   }
 </style>
