@@ -12,6 +12,9 @@
   },
   "tauri": {
     "allowlist": {
+      "clipboard": {
+        "all": true
+      },
       "notification": {
         "all": true
       }
@@ -62,10 +65,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 260,
+        "height": 420,
         "resizable": true,
         "title": "Remembrancer",
-        "width": 400
+        "width": 440
       }
     ]
   }

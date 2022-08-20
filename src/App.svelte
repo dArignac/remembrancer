@@ -3,6 +3,7 @@
   import { isPermissionGranted } from "@tauri-apps/api/notification";
   import NotificationButton from "./lib/NotificationButton.svelte";
   import Clock from "./lib/Clock.svelte";
+  import Base64 from "./lib/Base64.svelte";
 
   let notifPromise = isPermissionGranted();
 </script>
@@ -22,6 +23,8 @@
   {/await}
   <br /><br />
   <NotificationButton />
+  <hr />
+  <Base64 />
 </main>
 
 <style>
@@ -42,7 +45,7 @@
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.1;
-    margin: 1rem auto;
+    margin: 1rem auto 0 auto;
     max-width: 14rem;
   }
 </style>
