@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Countdown from "./lib/Countdown.svelte";
   import { isPermissionGranted } from "@tauri-apps/api/notification";
-  import NotificationButton from "./lib/NotificationButton.svelte";
-  import Clock from "./lib/Clock.svelte";
   import Base64 from "./lib/Base64.svelte";
+  import Clock from "./lib/Clock.svelte";
+  import NotificationButton from "./lib/NotificationButton.svelte";
+  import Version from "./lib/Version.svelte";
 
   let notifPromise = isPermissionGranted();
 </script>
@@ -13,6 +13,7 @@
   <Clock />
   <!-- <Countdown /> -->
   <hr />
+  <Version />
   Notification Permissions:
   {#await notifPromise}
     loading...

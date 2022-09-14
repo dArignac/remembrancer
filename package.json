@@ -93,8 +93,8 @@
               "files": [
                 "src/lib/Version.svelte"
               ],
-              "from": "Version <span>.*</span>",
-              "to": "Version <span>${nextRelease.version}</span>",
+              "from": "Version: <span>.*</span>",
+              "to": "Version: <span>${nextRelease.version}</span>",
               "results": [
                 {
                   "file": "src/lib/Version.svelte",
