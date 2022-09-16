@@ -157,14 +157,30 @@
               "files": [
                 "updater.json"
               ],
-              "from": "\"url\": \"https://github.com/dArignac/remembrancer/releases/download/v.*/remembrancer_.*_amd64.AppImage.tar.gz\",",
-              "to": "\"url\": \"https://github.com/dArignac/remembrancer/releases/download/v${nextRelease.version}/remembrancer_${nextRelease.version}_amd64.AppImage.tar.gz\",",
+              "from": "download/v.*/remembrancer",
+              "to": "download/v${nextRelease.version}/remembrancer",
               "results": [
                 {
                   "file": "updater.json",
                   "hasChanged": true,
-                  "numMatches": 2,
-                  "numReplacements": 2
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "updater.json"
+              ],
+              "from": "remembrancer_.*_amd64",
+              "to": "remembrancer_${nextRelease.version}_amd64",
+              "results": [
+                {
+                  "file": "updater.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
                 }
               ],
               "countMatches": true
