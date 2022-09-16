@@ -1,11 +1,25 @@
 {
-  "version": "v1.4.0",
-  "notes": "TODO from semantic",
-  "pub_date": "TODO from semantic",
+  "version": "v1.5.0",
+  "notes": "# [1.5.0](https://github.com/dArignac/remembrancer/compare/v1.4.0...v1.5.0) (2022-09-16)
+
+
+### Bug Fixes
+
+* adjusted release replacement handling ([14d1f39](https://github.com/dArignac/remembrancer/commit/14d1f398dacc0f4585b7526d96f3e1981194aded))
+
+
+### Features
+
+* added tauri updater ([6fbd82f](https://github.com/dArignac/remembrancer/commit/6fbd82f61931bf21e26dd49a5b3c269b53942509))
+
+
+
+",
+  "pub_date": "TODO",
   "platforms": {
     "linux-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBN0ExNDZDQTk3N0ZDRDkKUldUWi9IZXBiQlI2eXRTTmhtZzh2TTNoeVFVcEVQVTM3UWlxRHZGZTRlbVFDZ3ZTMERHZExETlcK",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.4.0/remembrancer_1.4.0_amd64.AppImage.tar.gz"
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.5.0/remembrancer_1.5.0_amd64.AppImage.tar.gz"
     }
   }
 }
