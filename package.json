@@ -104,6 +104,70 @@
                 }
               ],
               "countMatches": true
+            },
+            {
+              "files": [
+                "updater.json"
+              ],
+              "from": "\"version\": \"v.*\",",
+              "to": "\"version\": \"v${nextRelease.version}\",",
+              "results": [
+                {
+                  "file": "updater.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "updater.json"
+              ],
+              "from": "\"notes\": \".*\",",
+              "to": "\"notes\": \"${nextRelease.notes}\",",
+              "results": [
+                {
+                  "file": "updater.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "updater.json"
+              ],
+              "from": "\"pub_date\": \".*\",",
+              "to": "\"pub_date\": \"TODO\",",
+              "results": [
+                {
+                  "file": "updater.json",
+                  "hasChanged": true,
+                  "numMatches": 1,
+                  "numReplacements": 1
+                }
+              ],
+              "countMatches": true
+            },
+            {
+              "files": [
+                "updater.json"
+              ],
+              "from": "\"url\": \"https://github.com/dArignac/remembrancer/releases/download/v.*/remembrancer_.*_amd64.AppImage.tar.gz\",",
+              "to": "\"url\": \"https://github.com/dArignac/remembrancer/releases/download/v${nextRelease.version}/remembrancer_${nextRelease.version}_amd64.AppImage.tar.gz\",",
+              "results": [
+                {
+                  "file": "updater.json",
+                  "hasChanged": true,
+                  "numMatches": 2,
+                  "numReplacements": 2
+                }
+              ],
+              "countMatches": true
             }
           ]
         }
@@ -115,7 +179,8 @@
             "src-tauri/Cargo.toml",
             "src-tauri/tauri.conf.json",
             "package.json",
-            "src/lib/Version.svelte"
+            "src/lib/Version.svelte",
+            "updater.json"
           ],
           "message": "chore(release): ${nextRelease.version}[skip ci]\n\n${nextRelease.notes}"
         }

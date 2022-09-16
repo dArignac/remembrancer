@@ -35,15 +35,20 @@ async function updateRelease(token, os) {
   if (os === "ubuntu-latest") {
     assets = [
       "src-tauri/target/release/bundle/appimage/*_amd64.AppImage",
+      "src-tauri/target/release/bundle/appimage/*_amd64.AppImage.tar.gz",
       "src-tauri/target/release/bundle/deb/*_amd64.deb",
     ];
   } else if (os === "macos-latest") {
     assets = [
       "src-tauri/target/release/bundle/macos/*.app",
+      "src-tauri/target/release/bundle/macos/*.app.tar.gz",
       "src-tauri/target/release/bundle/dmg/*_x64.dmg",
     ];
   } else if (os === "windows-latest") {
-    assets = ["src-tauri/target/release/bundle/msi/*.msi"];
+    assets = [
+      "src-tauri/target/release/bundle/msi/*.msi",
+      "src-tauri/target/release/bundle/msi/*.msi.zip",
+    ];
   }
 
   const files = await globby(assets);
