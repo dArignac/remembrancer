@@ -125,24 +125,8 @@
               "files": [
                 "updater.json"
               ],
-              "from": "\"notes\": \".*\",",
-              "to": "\"notes\": \"${nextRelease.notes}\",",
-              "results": [
-                {
-                  "file": "updater.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "updater.json"
-              ],
               "from": "\"pub_date\": \".*\",",
-              "to": "\"pub_date\": \"TODO\",",
+              "to": "\"pub_date\": \"\",",
               "results": [
                 {
                   "file": "updater.json",
