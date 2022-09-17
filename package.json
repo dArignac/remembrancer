@@ -203,5 +203,8 @@
       ],
       "@semantic-release/github"
     ]
+  },
+  "volta": {
+    "node": "16.17.0"
   }
 }
