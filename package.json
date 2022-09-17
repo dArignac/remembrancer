@@ -163,8 +163,8 @@
                 {
                   "file": "updater.json",
                   "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
+                  "numMatches": 2,
+                  "numReplacements": 2
                 }
               ],
               "countMatches": true
@@ -179,8 +179,8 @@
                 {
                   "file": "updater.json",
                   "hasChanged": true,
-                  "numMatches": 2,
-                  "numReplacements": 2
+                  "numMatches": 1,
+                  "numReplacements": 1
                 }
               ],
               "countMatches": true
