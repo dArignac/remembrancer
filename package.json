@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@actions/github": "^5.0.1",
-    "@google/semantic-release-replace-plugin": "^1.1.0",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
@@ -38,138 +37,9 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
-        "@google/semantic-release-replace-plugin",
+        "@semantic-release/exec",
         {
-          "replacements": [
-            {
-              "files": [
-                "src-tauri/Cargo.toml"
-              ],
-              "from": "^version = \".*\"",
-              "to": "version = \"${nextRelease.version}\"",
-              "results": [
-                {
-                  "file": "src-tauri/Cargo.toml",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "src-tauri/tauri.conf.json"
-              ],
-              "from": "    \"version\": \".*\"",
-              "to": "    \"version\": \"${nextRelease.version}\"",
-              "results": [
-                {
-                  "file": "src-tauri/tauri.conf.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "package.json"
-              ],
-              "from": "  \"version\": \".*\",",
-              "to": "  \"version\": \"${nextRelease.version}\",",
-              "results": [
-                {
-                  "file": "package.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "src/lib/Version.svelte"
-              ],
-              "from": "Version: <span>.*</span>",
-              "to": "Version: <span>${nextRelease.version}</span>",
-              "results": [
-                {
-                  "file": "src/lib/Version.svelte",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "updater.json"
-              ],
-              "from": "\"version\": \"v.*\",",
-              "to": "\"version\": \"v${nextRelease.version}\",",
-              "results": [
-                {
-                  "file": "updater.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "updater.json"
-              ],
-              "from": "\"pub_date\": \".*\",",
-              "to": "\"pub_date\": \"\",",
-              "results": [
-                {
-                  "file": "updater.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "updater.json"
-              ],
-              "from": "download/v.*/remembrancer",
-              "to": "download/v${nextRelease.version}/remembrancer",
-              "results": [
-                {
-                  "file": "updater.json",
-                  "hasChanged": true,
-                  "numMatches": 2,
-                  "numReplacements": 2
-                }
-              ],
-              "countMatches": true
-            },
-            {
-              "files": [
-                "updater.json"
-              ],
-              "from": "remembrancer_.*_amd64",
-              "to": "remembrancer_${nextRelease.version}_amd64",
-              "results": [
-                {
-                  "file": "updater.json",
-                  "hasChanged": true,
-                  "numMatches": 1,
-                  "numReplacements": 1
-                }
-              ],
-              "countMatches": true
-            }
-          ]
+          "prepareCmd": "./release.sh ${nextRelease.version}"
         }
       ],
       [
