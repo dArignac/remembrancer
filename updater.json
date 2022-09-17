@@ -1,15 +1,26 @@
 {
-  "version": "v1.5.0",
-  "notes": "",
-  "pub_date": "",
+  "version": "v1.5.1",
+  "notes": "## [1.5.1](https://github.com/dArignac/remembrancer/compare/v1.5.0...v1.5.1) (2022-09-17)
+
+
+### Bug Fixes
+
+* fixed release version replacement ([7d98e10](https://github.com/dArignac/remembrancer/commit/7d98e10078535f3575d4bd4f941b2781513f8731))
+* fixed release version replacement ([64bbe00](https://github.com/dArignac/remembrancer/commit/64bbe008073da424e329f1e44976c78a2911c6e3))
+* updated packages ([44fee15](https://github.com/dArignac/remembrancer/commit/44fee15b19691c0f0ed6178b615dbd19fd7bb81a))
+
+
+
+",
+  "pub_date": "TODO",
   "platforms": {
     "linux-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBN0ExNDZDQTk3N0ZDRDkKUldUWi9IZXBiQlI2eXRTTmhtZzh2TTNoeVFVcEVQVTM3UWlxRHZGZTRlbVFDZ3ZTMERHZExETlcK",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.5.0/remembrancer_1.5.0_amd64.AppImage.tar.gz"
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.5.1/remembrancer_1.5.1_amd64.AppImage.tar.gz"
     },
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBN0ExNDZDQTk3N0ZDRDkKUldUWi9IZXBiQlI2eXRTTmhtZzh2TTNoeVFVcEVQVTM3UWlxRHZGZTRlbVFDZ3ZTMERHZExETlcK",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.5.0/remembrancer_1.5.0_x64_en-US.msi.zip"
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.5.1/remembrancer_1.5.0_x64_en-US.msi.zip"
     }
   }
 }
