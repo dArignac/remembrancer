@@ -62,7 +62,18 @@ jobs:
       run: npm ci
 
     - name: Bundle application
+      if: matrix.os == 'ubuntu-latest' || matrix.os == 'windows-latest'
       run: npm run tauri build
+      env:
+        TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+        TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
+
+    - name: Bundle application
+      if: matrix.os == 'macos-latest'
+      run: npm run tauri build --target universal-apple-darwin && ls -lsa src-tauri/target/release/bundle/**/*remembrancer*
+      env:
+        TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+        TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
 
     - name: Attach binary to tags
       run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ matrix.os }}
