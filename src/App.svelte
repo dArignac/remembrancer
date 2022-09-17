@@ -2,6 +2,7 @@
   import { isPermissionGranted } from "@tauri-apps/api/notification";
   import Base64 from "./lib/Base64.svelte";
   import Clock from "./lib/Clock.svelte";
+  import Countdown from "./lib/Countdown.svelte";
   import NotificationButton from "./lib/NotificationButton.svelte";
   import Version from "./lib/Version.svelte";
 
@@ -11,7 +12,7 @@
 <main>
   <h1>Remembrancer</h1>
   <Clock />
-  <!-- <Countdown /> -->
+  <Countdown />
   <hr />
   <Version />
   Notification Permissions:
