@@ -23,7 +23,7 @@
   {:catch error}
     failed: {error.message}
   {/await}
-  <br /><br />
+  <br />
   <NotificationButton />
   <hr />
   <Base64 />
