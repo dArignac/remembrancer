@@ -15,6 +15,14 @@
       "clipboard": {
         "all": true
       },
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": true,
+        "open": false,
+        "save": false
+      },
       "notification": {
         "all": true
       }
@@ -61,10 +69,8 @@
     },
     "updater": {
       "active": true,
-      "dialog": true,
-      "endpoints": [
-        "https://raw.githubusercontent.com/dArignac/remembrancer/main/updater.json"
-      ],
+      "dialog": false,
+      "endpoints": ["https://time.torv.rocks/update.json"],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBN0ExNDZDQTk3N0ZDRDkKUldUWi9IZXBiQlI2eXRTTmhtZzh2TTNoeVFVcEVQVTM3UWlxRHZGZTRlbVFDZ3ZTMERHZExETlcK"
     },
     "windows": [

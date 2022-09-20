@@ -5,6 +5,36 @@
   import Countdown from "./lib/Countdown.svelte";
   import NotificationButton from "./lib/NotificationButton.svelte";
   import Version from "./lib/Version.svelte";
+  import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
+  import { relaunch } from "@tauri-apps/api/process";
+  import { listen } from "@tauri-apps/api/event";
+  import { onMount } from "svelte";
+
+  // this is only emitted if we run checkUpdate()
+  // listen("tauri://update-available", function (res) {
+  //   console.log("X", res);
+  //   alert("New version available: " + res);
+  // });
+
+  async function tryUpdate() {
+    try {
+      const { shouldUpdate, manifest } = await checkUpdate();
+      if (shouldUpdate) {
+        // display dialog
+        alert("Installing update");
+        await installUpdate();
+        // install complete, restart app
+        alert("Update done, restarting");
+        await relaunch();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  onMount(() => {
+    tryUpdate();
+  });
 
   let notifPromise = isPermissionGranted();
 </script>
