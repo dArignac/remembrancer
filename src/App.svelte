@@ -40,7 +40,7 @@
 </script>
 
 <main>
-  <h1>Remembrancer</h1>
+  <h2>Remembrancer</h2>
   <Clock />
   <Countdown />
   <hr />
@@ -71,7 +71,7 @@
     margin: 0 auto;
   }
 
-  h1 {
+  h2 {
     color: #ff3e00;
     text-transform: uppercase;
     font-size: 2rem;
