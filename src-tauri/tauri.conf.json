@@ -78,7 +78,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 480,
+        "height": 500,
         "resizable": true,
         "title": "Remembrancer",
         "width": 440

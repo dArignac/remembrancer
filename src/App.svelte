@@ -42,6 +42,7 @@
 <main>
   <h1>Remembrancer</h1>
   <Clock />
+  <hr />
   <Countdown />
   <hr />
   <Version />
