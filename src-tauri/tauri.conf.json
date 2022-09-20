@@ -71,7 +71,7 @@
       "active": true,
       "dialog": false,
       "endpoints": [
-        "https://raw.githubusercontent.com/dArignac/remembrancer/main/updater.jso"
+        "https://raw.githubusercontent.com/dArignac/remembrancer/main/updater.json"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBN0ExNDZDQTk3N0ZDRDkKUldUWi9IZXBiQlI2eXRTTmhtZzh2TTNoeVFVcEVQVTM3UWlxRHZGZTRlbVFDZ3ZTMERHZExETlcK"
     },

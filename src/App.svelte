@@ -28,7 +28,7 @@
         await relaunch();
       }
     } catch (error) {
-      console.log(error);
+      alert("Error occurred " + error);
     }
   }
 
