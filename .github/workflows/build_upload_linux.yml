@@ -35,6 +35,10 @@ jobs:
         restore-keys: |
           linux-node-
 
+    - name: Install node packages
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
+
     - name: Setup Rust
       uses: actions-rs/toolchain@v1
       with:
@@ -49,10 +53,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf
-
-    - name: Install node packages
-      if: steps.npm-cache.outputs.cache-hit != 'true'
-      run: npm ci
 
     - name: Bundle application
       run: npm run tauri build
@@ -85,6 +85,24 @@ jobs:
     steps:
     - name: Clone repo
       uses: actions/checkout@v3
+    
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      id: node-cache
+      with:
+        path: node_modules
+        key: linux-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          linux-node-
+
+    - name: Install node packages
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
 
     - name: Fetch previous tag
       run: node ./ci/get-previous-tag.mjs >> $GITHUB_ENV
