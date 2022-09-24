@@ -87,7 +87,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Fetch previous tag
-      run: ./ci/get-previous-tag.mjs >> $GITHUB_ENV
+      run: node ./ci/get-previous-tag.mjs >> $GITHUB_ENV
 
     - name: Download signature file
       uses: actions/download-artifact@v3
