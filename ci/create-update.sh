@@ -5,11 +5,13 @@ TARGET=$3
 # restored from github artifacts
 SIGNATURE=`cat ../src-tauri/target/release/bundle/appimage/remembrancer_*_amd64.AppImage.tar.gz.sig`
 DATE=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
-DIR="../updates/${TARGET}"
+DIR="_site/${TARGET}"
 # the previous version will call that path/url with its version number
 FILE="${DIR}/${PREVIOUS_VERSION}.json"
 
 echo "Creating update file for version ${PREVIOS_VERSION} on Github pages for target ${TARGET} and new version ${VERSION}"
+# FIXME remove
+pwd
 
 mkdir -p ${DIR}
 cp update.tmpl.json ${FILE}
