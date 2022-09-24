@@ -121,6 +121,8 @@ jobs:
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
+      with:
+        path: _sites/${{ env.TARGET_NAME }}/${{ env.PREVIOUS_TAG }}
     
     - name: Deploy to GitHub Pages
       id: deployment

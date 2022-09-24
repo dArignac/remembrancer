@@ -7,7 +7,7 @@ SIGNATURE=`cat src-tauri/target/release/bundle/appimage/remembrancer_*_amd64.App
 DATE=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
 DIR="_site/${TARGET}"
 # the previous version will call that path/url with its version number
-FILE="${DIR}/${PREVIOUS_VERSION}.json"
+FILE="${DIR}/${PREVIOUS_VERSION}/update.json"
 
 echo "Creating update file for version ${PREVIOS_VERSION} on Github pages for target ${TARGET} and new version ${VERSION}"
 
