@@ -109,6 +109,7 @@ jobs:
       run: node ./ci/get-previous-tag.mjs ${{ secrets.PAT }} >> $GITHUB_ENV
 
     - name: Download signature file
+      id: download-signature-file
       uses: actions/download-artifact@v3
       with:
         name: release-signature-${{ env.TARGET }}-${{ github.ref_name }}
@@ -117,7 +118,7 @@ jobs:
       uses: actions/configure-pages@v2
     
     - name: Create update file
-      run: ./ci/create-update.sh "${{ github.ref_name }}" "${{ env.PREVIOUS_TAG }}" ${{ env.TARGET_NAME }}
+      run: ./ci/create-update.sh "${{ github.ref_name }}" "${{ env.PREVIOUS_TAG }}" ${{ env.TARGET_NAME }} ${{ steps.download-signature-file.outputs.download-path }}
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1

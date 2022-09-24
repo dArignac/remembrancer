@@ -2,12 +2,14 @@
 VERSION=`echo "$1" | cut -c2-`
 PREVIOUS_VERSION=`echo "$2" | cut -c2-`
 TARGET=$3
+SIGNATURE_FILE_DIR=$4
 # restored from github artifacts
-SIGNATURE=`cat src-tauri/target/release/bundle/appimage/remembrancer_*_amd64.AppImage.tar.gz.sig`
+SIGNATURE=`cat ${SIGNATURE_FILE_DIR}/remembrancer_*_amd64.AppImage.tar.gz.sig`
 DATE=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
 DIR="_site/${TARGET}"
 # the previous version will call that path/url with its version number
-FILE="${DIR}/${PREVIOUS_VERSION}/update.json"
+# Note: "v" is included here as we upload in the workflow with the git ref as value with has the "v" in it, e.g. v1.2.3
+FILE="${DIR}/v${PREVIOUS_VERSION}/update.json"
 
 echo "Creating update file for version ${PREVIOS_VERSION} on Github pages for target ${TARGET} and new version ${VERSION}"
 
