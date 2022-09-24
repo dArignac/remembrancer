@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: 16.17.1
-  TARGET: linux-x86_64
+  TARGET_NAME: linux-x86_64
 
 jobs:
 
@@ -69,7 +69,7 @@ jobs:
       uses: actions/configure-pages@v2
     
     - name: Create update file
-      run: ./create-update "${{ github.ref_name }}" ${{ env.TARGET }}
+      run: ./create-update "${{ github.ref_name }}" ${{ env.TARGET_NAME }}
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
@@ -81,4 +81,4 @@ jobs:
       uses: actions/deploy-pages@v1
 
     - name: Attach binary to tags
-      run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ env.TARGET }}
+      run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ env.TARGET_NAME }}
