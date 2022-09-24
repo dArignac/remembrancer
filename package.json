@@ -47,6 +47,7 @@
         {
           "assets": [
             "src-tauri/Cargo.toml",
+            "src-tauri/Cargo.lock",
             "src-tauri/tauri.conf.json",
             "package.json",
             "src/lib/Version.svelte",
