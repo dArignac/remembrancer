@@ -105,7 +105,7 @@ jobs:
       run: npm ci
 
     - name: Fetch previous tag
-      run: node ./ci/get-previous-tag.mjs >> $GITHUB_ENV
+      run: node ./ci/get-previous-tag.mjs ${{ secrets.PAT }} >> $GITHUB_ENV
 
     - name: Download signature file
       uses: actions/download-artifact@v3
