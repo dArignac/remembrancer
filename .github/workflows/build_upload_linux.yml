@@ -7,13 +7,13 @@ on:
 
 env:
   NODE_VERSION: 16.17.1
-  RUNNER: ubuntu-latest
+  TARGET: linux-x86_64
 
 jobs:
 
   tauri:
 
-    runs-on: ${{ env.RUNNER }}
+    runs-on: ubuntu-latest
 
     environment:
       name: github-pages
@@ -69,7 +69,7 @@ jobs:
       uses: actions/configure-pages@v2
     
     - name: Create update file
-      run: ./create-update "${{ github.ref_name }}" "linux-x86_64"
+      run: ./create-update "${{ github.ref_name }}" ${{ env.TARGET }}
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
@@ -81,4 +81,4 @@ jobs:
       uses: actions/deploy-pages@v1
 
     - name: Attach binary to tags
-      run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ env.RUNNER }}
+      run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ env.TARGET }}
