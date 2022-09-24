@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=$1
+VERSION=`echo "$1" | cut -c2-`
 TARGET=$2
 SIGNATURE=`cat src-tauri/target/release/bundle/appimage/remembrancer_*_amd64.AppImage.tar.gz.sig`
 DATE=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
