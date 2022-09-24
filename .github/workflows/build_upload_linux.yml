@@ -116,7 +116,7 @@ jobs:
       uses: actions/configure-pages@v2
     
     - name: Create update file
-      run: ./create-update.sh "${{ github.ref_name }}" "${{ env.PREVIOUS_TAG }}" ${{ env.TARGET_NAME }}
+      run: ./ci/create-update.sh "${{ github.ref_name }}" "${{ env.PREVIOUS_TAG }}" ${{ env.TARGET_NAME }}
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
