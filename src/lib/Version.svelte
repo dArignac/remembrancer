@@ -1,4 +1,4 @@
-<p>Version: <span>1.6.7</span></p>
+<p>Version: <span>1.6.8</span></p>
 
 <style>
   p {
