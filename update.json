@@ -1,19 +1,19 @@
 {
-  "version": "1.6.27",
+  "version": "1.6.28",
   "notes": "n/a",
-  "pub_date": "2022-09-25T14:44:22Z",
+  "pub_date": "2022-09-25T14:58:56Z",
   "platforms": {
     "darwin-x86_64": {
       "signature": "",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.27/remembrancer.app.tar.gz"
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.28/remembrancer.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.27/remembrancer_1.6.27_amd64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eXBEc3o4Qk4rY1RXZE4vQlphYUJRN2NoSzUwSzhPNzZveittU2xQUWJrZVZqYXJSVkUzenRFMXhTeElnL1JoN0RJNWxIRzIwSzgxeTU1b2Nka0NsdUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTE3OTE4CWZpbGU6cmVtZW1icmFuY2VyXzEuNi4yOF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKNEdBRTlxYmdyODhMQWZPWmoxL3AzRWpTWWxBZHF3clg2eldNQ3d1SkFRTXFqb0crRVRTTWZ0WFluSUZlbWNwYnRGTExMOXhMU3pXL2NKcU5vWDFFRHc9PQo=",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.28/remembrancer_1.6.28_amd64.AppImage.tar.gz"
     },
     "windows-x86_64": {
       "signature": "",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.27/remembrancer_1.6.27_x64_en-US.msi.zip"
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.28/remembrancer_1.6.28_x64_en-US.msi.zip"
     }
   }
 }
