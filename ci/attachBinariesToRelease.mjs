@@ -32,7 +32,7 @@ async function updateRelease(token, target) {
 
   // differentiate in which os we are to select the correct path
   let assets = [];
-  if (target === "linux-x86_64") {
+  if (target === "ubuntu-latest") {
     assets = [
       "src-tauri/target/release/bundle/appimage/*_amd64.AppImage",
       "src-tauri/target/release/bundle/appimage/*_amd64.AppImage.tar.gz",
