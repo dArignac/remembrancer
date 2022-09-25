@@ -7,7 +7,7 @@ SIGNATURE_WINDOWS_FILE_DIR=$4
 # restored from github artifacts
 SIGNATURE_LINUX=`cat ${SIGNATURE_LINUX_FILE_DIR}/remembrancer_*_amd64.AppImage.tar.gz.sig`
 SIGNATURE_MACOS=`cat ${SIGNATURE_MACOS_FILE_DIR}/*.app.tar.gz.sig`
-SIGNATURE_WINDOWS=`cat ${SIGNATURE_QINDOWS_FILE_DIR}/remembrancer_*_x64_en-US.msi.zip.sig`
+SIGNATURE_WINDOWS=`cat ${SIGNATURE_WINDOWS_FILE_DIR}/remembrancer_*_x64_en-US.msi.zip.sig`
 DATE=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
 
 tee update.json <<EOF
