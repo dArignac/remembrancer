@@ -25,6 +25,12 @@
       },
       "notification": {
         "all": true
+      },
+      "process": {
+        "all": false,
+        "exit": false,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": false
       }
     },
     "bundle": {
