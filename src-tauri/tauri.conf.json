@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "remembrancer",
-    "version": "1.6.28"
+    "version": "1.6.29"
   },
   "tauri": {
     "allowlist": {
