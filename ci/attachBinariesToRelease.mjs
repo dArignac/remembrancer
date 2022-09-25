@@ -38,7 +38,7 @@ async function updateRelease(token, target) {
       "src-tauri/target/release/bundle/appimage/*_amd64.AppImage.tar.gz",
       "src-tauri/target/release/bundle/deb/*_amd64.deb",
     ];
-  } /*else if (target === "macos-latest") {
+  } else if (target === "macos-latest") {
     assets = [
       "src-tauri/target/release/bundle/macos/*.app",
       "src-tauri/target/release/bundle/macos/*.app.tar.gz",
@@ -49,8 +49,7 @@ async function updateRelease(token, target) {
       "src-tauri/target/release/bundle/msi/*.msi",
       "src-tauri/target/release/bundle/msi/*.msi.zip",
     ];
-  }*/
-  // FIXME handle other targets
+  }
 
   const files = await globby(assets);
   if (files.length > 0) {
