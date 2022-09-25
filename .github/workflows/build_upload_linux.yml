@@ -63,7 +63,7 @@ jobs:
     - name: Store signature as artifact
       uses: actions/upload-artifact@v3
       with:
-        name: release-signature-${{ env.TARGET }}-${{ github.ref_name }}
+        name: release-signature-${{ env.TARGET_NAME }}-${{ github.ref_name }}
         path: src-tauri/target/release/bundle/appimage/remembrancer_*_amd64.AppImage.tar.gz.sig
 
     - name: Attach binary to tags
