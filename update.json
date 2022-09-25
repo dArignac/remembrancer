@@ -1,0 +1,19 @@
+{
+  "version": "",
+  "notes": "n/a",
+  "pub_date": "",
+  "platforms": {
+    "darwin-x86_64": {
+      "signature": "",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.18/remembrancer.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.18/remembrancer_1.6.18_amd64.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.18/remembrancer_1.6.18_x64_en-US.msi.zip"
+    }
+  }
+}
