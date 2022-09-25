@@ -33,7 +33,7 @@
 </script>
 
 <main>
-  <h2>Remembrancer</h2>
+  <h2>The Remembrancer</h2>
   <Clock />
   <Countdown />
   <hr />
