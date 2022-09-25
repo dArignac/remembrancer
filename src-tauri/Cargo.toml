@@ -1,6 +1,6 @@
 [package]
 name = "remembrancer"
-version = "1.6.34"
+version = "1.6.35"
 description = "A simple countdown app"
 authors = ["Alexander Herrmann"]
 license = "MIT"
