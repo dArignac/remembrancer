@@ -18,7 +18,7 @@ tee update.json <<EOF
       "url": "https://github.com/dArignac/remembrancer/releases/download/v${VERSION}/remembrancer.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "${SIGNATRUE_LINUX}",
+      "signature": "${SIGNATURE_LINUX}",
       "url": "https://github.com/dArignac/remembrancer/releases/download/v${VERSION}/remembrancer_${VERSION}_amd64.AppImage.tar.gz"
     },
     "windows-x86_64": {
