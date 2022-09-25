@@ -69,60 +69,30 @@ jobs:
     - name: Attach binary to tags
       run: node ci/attachBinariesToRelease.mjs ${{ secrets.PAT }} ${{ env.TARGET_NAME }}
   
-  pages:
-    name: Deploy the update file to Github pages
+  update:
+    name: Update the Tauri updater file
     runs-on: ubuntu-latest
     needs: build
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
 
     steps:
     - name: Clone repo
       uses: actions/checkout@v3
-    
-    - name: Setup node
-      uses: actions/setup-node@v3
       with:
-        node-version: ${{ env.NODE_VERSION }}
+        ref: tauri-updates
 
-    - name: Cache node_modules
-      uses: actions/cache@v3
-      id: node-cache
-      with:
-        path: node_modules
-        key: linux-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          linux-node-
-
-    - name: Install node packages
-      if: steps.npm-cache.outputs.cache-hit != 'true'
-      run: npm ci
-
-    - name: Fetch previous tag
-      run: node ./ci/get-previous-tag.mjs ${{ secrets.PAT }} >> $GITHUB_ENV
-
-    - name: Download signature file
-      id: download-signature-file
+    - name: Download signature file for Linux
+      id: signature-linux
       uses: actions/download-artifact@v3
       with:
-        name: release-signature-${{ env.TARGET }}-${{ github.ref_name }}
-    
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
+        name: release-signature-linux-x86_64-${{ github.ref_name }}
     
     - name: Create update file
-      run: ./ci/create-update.sh "${{ github.ref_name }}" "${{ env.PREVIOUS_TAG }}" ${{ env.TARGET_NAME }} ${{ steps.download-signature-file.outputs.download-path }}
-    
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-    
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      run: ./create-update.sh "${{ github.ref_name }}" ${{ steps.signature-linux.outputs.download-path }}
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "update for release ${{ github.ref_name }}"
+        file_pattern: "update.json"
