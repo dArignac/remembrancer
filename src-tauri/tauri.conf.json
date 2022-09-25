@@ -75,7 +75,7 @@
     },
     "updater": {
       "active": true,
-      "dialog": false,
+      "dialog": true,
       "endpoints": [
         "https://raw.githubusercontent.com/dArignac/remembrancer/tauri-updates/update.json"
       ],

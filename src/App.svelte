@@ -26,7 +26,7 @@
   }
 
   onMount(() => {
-    tryUpdate();
+    //tryUpdate();
   });
 
   let notifPromise = isPermissionGranted();
