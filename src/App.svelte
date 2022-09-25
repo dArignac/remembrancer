@@ -1,20 +1,13 @@
 <script lang="ts">
   import { isPermissionGranted } from "@tauri-apps/api/notification";
+  import { relaunch } from "@tauri-apps/api/process";
+  import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
+  import { onMount } from "svelte";
   import Base64 from "./lib/Base64.svelte";
   import Clock from "./lib/Clock.svelte";
   import Countdown from "./lib/Countdown.svelte";
   import NotificationButton from "./lib/NotificationButton.svelte";
   import Version from "./lib/Version.svelte";
-  import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
-  import { relaunch } from "@tauri-apps/api/process";
-  import { listen } from "@tauri-apps/api/event";
-  import { onMount } from "svelte";
-
-  // this is only emitted if we run checkUpdate()
-  // listen("tauri://update-available", function (res) {
-  //   console.log("X", res);
-  //   alert("New version available: " + res);
-  // });
 
   async function tryUpdate() {
     try {
