@@ -1,19 +1,19 @@
 {
-  "version": "1.6.34",
+  "version": "1.6.35",
   "notes": "n/a",
-  "pub_date": "2022-09-25T19:06:05Z",
+  "pub_date": "2022-09-25T19:31:53Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eWwrdk5INGk4YUV5T3E4TEZudkR2dm9vRXB2aTJzUHVRWVhlMEFyVDJaelQ4S2ZDOUZqS29iTzkwSndSa3ZUOXFKWm14MXZZVUViVS8zTExHdStFdUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTMyNDQ3CWZpbGU6cmVtZW1icmFuY2VyLmFwcC50YXIuZ3oKZEY3Q2t1ZmFvK0d5M29zQTlCTjc1RWo1Vm9ia0RpZEN5anlVdGlkclVIY0NjU096TDFFTExoWVhISlBYRzBrTjRqZGQzd3FGTzNrYlpkQnhPR0NCQ0E9PQo=",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.34/remembrancer.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eXJ1OXJMQTErRHh6UVhrS0hjaGsybkQ1Mk4ySnY5clE3NGEreG52VnA5eDVseE9FemJKYnNrL0c2eWVtTFE1anRCVXZEd2RabjJXYVRnWHdEa0Iwanc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTMzOTE5CWZpbGU6cmVtZW1icmFuY2VyLmFwcC50YXIuZ3oKM0F3Wm5lck11M2t0VjNXWVBMb3JlY0g1WVg4bm1tYk84UjBJSFA4SjVValVSbmxiZFQ5Q2ZsbzgreHFNYkdPWS92aTcvYlFGUHVrRktTM1RQa0grQkE9PQo=",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.35/remembrancer.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eW5WQTFpRWZFVGRTNFJjR3R0YUV2SXc0YlJ4TGdvM2ZEVU4rbkdwc1BsUjUrUS9Mcm9UaE53ZWIzQzhtL29ncU83MHYzNWprUFlhV2J0UzhmaFhVcVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTMyNTkxCWZpbGU6cmVtZW1icmFuY2VyXzEuNi4zNF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKbkJ1ZTdBTzJzbkhCUkZENVRSc1hwMGJTWmUzalVHNlRvcVFrU3RMdVNGTnEzZmwzNE85ZVlTRklNMEpubVY1Wjl6YURyaGt0T3A0emcxNExkSHEyRHc9PQo=",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.34/remembrancer_1.6.34_amd64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eXJGdkl4SEFtbW13Wk9DOHFFMHBKeGtEVHZUUG1YRDR4cWFUc0hUa0Zma1hwOXlDQWJoOFhEcnNrWE0zNDNMTFRzd0VCeWVmaFN4dG5hQXRjVXFpWVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTM0MjI0CWZpbGU6cmVtZW1icmFuY2VyXzEuNi4zNV9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKYjIrY3dBclpManlmYVZvRUUxQmFGOWhzOVZ6T1dDT0tYNGw5c0k0OTNoSVExaXZSMUhQM2dQTjBpQmpudkd1dHV0WnVtVmZYNmoyeWpPNHFSclBwQ1E9PQo=",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.35/remembrancer_1.6.35_amd64.AppImage.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eW5zVENvSFFmcDM0ZlpRcDA4YXpOa0N5Tk94T2VLcWp4d3p5ellwS0tTOTUrOG8rdmVEb2IvVkFFQ1hxNTRhUDN0NDdtNmZ0dElxVUVmM2JTTEJmcGdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTMyNzE2CWZpbGU6cmVtZW1icmFuY2VyXzEuNi4zNF94NjRfZW4tVVMubXNpLnppcApLd01ieitoVGNMdlhNRFMvME5EMFNqa0VPMzJ5M0tQcUFNKzZlOHJ6V0tXekp1WjVhTmZ0WXFLc3pzSnpaTHlpUFdOSDg5cjhvTWFVaFBJbVEzL29EZz09Cg==",
-      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.34/remembrancer_1.6.34_x64_en-US.msi.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWi9IZXBiQlI2eW91YjJYTTgzempUOTFCbjl4d3MvVHJhNisvOUc0WVV6QjliSzVVZ0RiNkhyK2UrQlRwRzZ5RDZhNWVlV3lSeGtzM1haNGQ0YmhRZ2pMbEFQZFI1akFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjY0MTM0MjU2CWZpbGU6cmVtZW1icmFuY2VyXzEuNi4zNV94NjRfZW4tVVMubXNpLnppcApUemgxOGNYbElmRkZsQXQ3TmM2Y2ZtcE5kSWR2MG9tdS80OHJPdDBtWUpNYWhsMWZRbkhUaUlPTlBaNFRrMGNLUkRPdGovaEorMlZpMkRlZzQ0RlFBQT09Cg==",
+      "url": "https://github.com/dArignac/remembrancer/releases/download/v1.6.35/remembrancer_1.6.35_x64_en-US.msi.zip"
     }
   }
 }
