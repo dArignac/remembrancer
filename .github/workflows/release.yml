@@ -1,10 +1,10 @@
-name: Test and Release
+name: Release
 
 on:
   push
 
 env:
-  NODE_VERSION: 16.15.0
+  NODE_VERSION: 16.17.1
 
 jobs:
 
